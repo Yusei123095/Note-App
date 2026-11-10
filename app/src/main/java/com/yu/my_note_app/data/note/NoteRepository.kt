@@ -5,7 +5,7 @@ import com.yu.my_note_app.data.SaveResult
 import kotlinx.coroutines.flow.Flow
 
 class NoteRepository(private val dao: NoteDao){
-    fun observeAllNotes(): Flow<List<Note>> = dao.observeAllNotes()
+    fun observeAll(): Flow<List<Note>> = dao.observeAll()
 
     suspend fun getNoteById(id: String): Note = dao.getNoteById(id)
 

@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home
+package com.yu.my_note_app.ui.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -34,7 +34,7 @@ import com.yu.my_note_app.data.alarm.Alarm
 import com.yu.my_note_app.util.formatTimer
 
 @Composable
-fun AlarmNoteCard(
+fun AlarmCard(
     alarm: Alarm,
     modifier: Modifier = Modifier
 ) {

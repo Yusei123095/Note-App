@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home.addnote
+package com.yu.my_note_app.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior

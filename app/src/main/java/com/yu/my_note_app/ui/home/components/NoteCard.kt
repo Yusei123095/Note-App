@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home
+package com.yu.my_note_app.ui.home.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

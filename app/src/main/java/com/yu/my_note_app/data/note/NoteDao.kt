@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface NoteDao{
     @Query("select * from notes")
-    fun observeAllNotes(): Flow<List<Note>>
+    fun observeAll(): Flow<List<Note>>
 
     @Query("select * from notes where id = :id")
     suspend fun getNoteById(id: String): Note

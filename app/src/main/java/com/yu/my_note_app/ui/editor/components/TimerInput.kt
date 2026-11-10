@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home.addnote
+package com.yu.my_note_app.ui.editor.components
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column

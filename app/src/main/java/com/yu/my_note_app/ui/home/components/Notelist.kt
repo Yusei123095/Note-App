@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home
+package com.yu.my_note_app.ui.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -33,7 +33,7 @@ fun NoteList(modifier: Modifier = Modifier, alarms: List<Alarm>, notes: List<Not
         CustomizedPager(
             pages = alarms.map { alarm ->
                 {
-                    AlarmNoteCard(
+                    AlarmCard(
                         alarm,
                         Modifier.padding(vertical = 10.dp),
 

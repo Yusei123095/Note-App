@@ -7,8 +7,8 @@ import com.yu.my_note_app.data.SaveResult
 import kotlinx.coroutines.flow.Flow
 
 class AlarmRepository(private val dao: AlarmDao) {
-    fun observeAllAlarms(): Flow<List<Alarm>> = dao.observeAllAlarms()
-    fun observeUpcomingAlarms(num: Int = 3): Flow<List<Alarm>> =
+    fun observeAll(): Flow<List<Alarm>> = dao.observeAll()
+    fun observeUpcoming(num: Int = 3): Flow<List<Alarm>> =
         dao.observeUpcomingAlarms(num)
 
     suspend fun getAlarmById(id: String): Alarm = dao.getAlarmById(id)

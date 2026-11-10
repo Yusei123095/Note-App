@@ -18,13 +18,15 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.yu.my_note_app.ui.components.Header
 import com.yu.my_note_app.ui.editor.EditorType
+import com.yu.my_note_app.ui.home.components.EmptyNoteList
+import com.yu.my_note_app.ui.home.components.NoteList
 
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier,
                onEditor: (id: String?, type: EditorType) -> Unit,
               viewModel: HomeViewModel = viewModel(factory = HomeViewModel.Factory)
 ){
-    val homeUiState by viewModel.homeState.collectAsStateWithLifecycle()
+    val homeUiState by viewModel.homeUiState.collectAsStateWithLifecycle()
 
     Scaffold(modifier = modifier.fillMaxSize(),
         floatingActionButton = {
@@ -52,9 +54,11 @@ fun HomeScreen(modifier: Modifier = Modifier,
                     notes = homeUiState.noteList
                 )
             else
-                EmptyNoteList(modifier = Modifier.weight(1f)
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),)
+                EmptyNoteList(
+                    modifier = Modifier.weight(1f)
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp),
+                )
         }
 
     }

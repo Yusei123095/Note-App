@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface AlarmDao {
 
     @Query("select * from alarms order by triggerAt asc")
-    fun observeAllAlarms(): Flow<List<Alarm>>
+    fun observeAll(): Flow<List<Alarm>>
 
     @Query("select * from alarms where enable = true order by triggerAt asc limit 1")
     suspend fun getNextAlarm(): Alarm

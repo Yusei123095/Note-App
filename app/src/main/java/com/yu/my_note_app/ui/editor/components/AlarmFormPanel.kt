@@ -12,7 +12,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import com.yu.my_note_app.ui.components.SingleLineTextField
 import com.yu.my_note_app.ui.editor.AlarmForm
-import com.yu.my_note_app.ui.home.addnote.TimerInput
 import com.yu.my_note_app.ui.home.rememberTimerState
 
 @Composable
