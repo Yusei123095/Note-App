@@ -1,4 +1,4 @@
-package com.yu.my_note_app.ui.home
+package com.yu.my_note_app.ui.editor.components
 
 import androidx.compose.material3.DatePickerState
 import androidx.compose.material3.ExperimentalMaterial3Api

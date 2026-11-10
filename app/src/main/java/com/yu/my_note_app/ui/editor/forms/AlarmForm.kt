@@ -2,8 +2,8 @@ package com.yu.my_note_app.ui.editor.forms
 
 import com.yu.my_note_app.data.alarm.Alarm
 import com.yu.my_note_app.ui.editor.EditorError
-import com.yu.my_note_app.ui.home.defaultDateTime
-import com.yu.my_note_app.ui.home.toMillis
+import com.yu.my_note_app.ui.editor.components.defaultDateTime
+import com.yu.my_note_app.ui.editor.components.toMillis
 
 data class AlarmForm(
     val memo: String = "",

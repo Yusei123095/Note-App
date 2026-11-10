@@ -44,14 +44,14 @@ fun HomeScreen(modifier: Modifier = Modifier,
         Column(Modifier.padding(innerPadding),
             ) {
             Header()
-            if (homeUiState.noteList.isNotEmpty())
+            if (homeUiState.alarms.isNotEmpty() || homeUiState.notes.isNotEmpty())
                 NoteList(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp),
-                    alarms = homeUiState.alarmList,
-                    notes = homeUiState.noteList
+                    alarms = homeUiState.alarms,
+                    notes = homeUiState.notes
                 )
             else
                 EmptyNoteList(

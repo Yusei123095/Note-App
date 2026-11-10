@@ -11,7 +11,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.yu.my_note_app.ui.components.SingleLineTextField
-import com.yu.my_note_app.ui.editor.NoteForm
+import com.yu.my_note_app.ui.editor.forms.NoteForm
 
 @Composable
 fun NoteFormPanel(modifier: Modifier = Modifier,

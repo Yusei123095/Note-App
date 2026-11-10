@@ -37,10 +37,9 @@ fun EditorScreen(
     val headerText = when (val s = state) {
         is EditorUiState.Ready -> when (s.mode) {
             EditorMode.Create -> "新規作成"
-            is EditorMode.Edit -> when (s.selected) {
-                EditorType.NOTE -> "メモを編集"
-                EditorType.ALARM -> "アラームを編集"
-            }
+            is EditorMode.EditNote ->  "メモを編集"
+            is EditorMode.EditAlarm -> "アラームを編集"
+
         }
         else -> "読み込み中"
     }
