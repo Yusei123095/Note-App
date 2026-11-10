@@ -51,7 +51,8 @@ fun HomeScreen(modifier: Modifier = Modifier,
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp),
                     alarms = homeUiState.alarms,
-                    notes = homeUiState.notes
+                    notes = homeUiState.notes,
+                    onClick = onEditor
                 )
             else
                 EmptyNoteList(

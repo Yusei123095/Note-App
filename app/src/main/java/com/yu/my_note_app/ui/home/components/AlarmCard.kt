@@ -31,17 +31,20 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yu.my_note_app.data.alarm.Alarm
+import com.yu.my_note_app.ui.editor.EditorType
 import com.yu.my_note_app.util.formatTimer
 
 @Composable
 fun AlarmCard(
     alarm: Alarm,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: (String, EditorType) -> Unit
 ) {
 
     val onCard = MaterialTheme.colorScheme.onSecondary
 
     ElevatedCard(
+        onClick = {onClick(alarm.id, EditorType.ALARM)},
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 140.dp),

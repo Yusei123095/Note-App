@@ -29,16 +29,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.yu.my_note_app.data.note.Note
+import com.yu.my_note_app.ui.editor.EditorType
 import com.yu.my_note_app.util.formatCreatedAt
 
 @Composable
 fun NoteCard(
     note: Note,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {}
+    onClick: (String, EditorType) -> Unit
 ) {
     Card(
-        onClick = onClick,
+        onClick = { onClick(note.id, EditorType.NOTE) },
         modifier = modifier
             .fillMaxWidth(),
         shape = RoundedCornerShape(24.dp),

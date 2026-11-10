@@ -21,9 +21,14 @@ import androidx.compose.ui.unit.dp
 import com.yu.my_note_app.data.alarm.Alarm
 import com.yu.my_note_app.ui.components.CustomizedPager
 import com.yu.my_note_app.data.note.Note
+import com.yu.my_note_app.ui.editor.EditorType
 
 @Composable
-fun NoteList(modifier: Modifier = Modifier, alarms: List<Alarm>, notes: List<Note>){
+fun NoteList(modifier: Modifier = Modifier,
+             alarms: List<Alarm>,
+             notes: List<Note>,
+             onClick: (String, EditorType) -> Unit
+){
 
     Column(modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Top,
@@ -36,20 +41,22 @@ fun NoteList(modifier: Modifier = Modifier, alarms: List<Alarm>, notes: List<Not
                     AlarmCard(
                         alarm,
                         Modifier.padding(vertical = 10.dp),
-
+                        onClick = onClick
                         )
                 }
             }
         )
 
         if (notes.isNotEmpty()) Text("メモ", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface)
-
         LazyColumn(
-
         ) {
             items( notes.size){
                 index ->
-                NoteCard(note = notes[index], Modifier.padding(vertical = 10.dp))
+                NoteCard(
+                    note = notes[index],
+                    Modifier.padding(vertical = 10.dp),
+                    onClick = onClick
+                )
             }
         }
     }
